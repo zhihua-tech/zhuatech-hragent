@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.hragent.service;
 import jakarta.validation.constraints.*; import org.springframework.stereotype.Service; import java.util.*;
 /** 对员工服务事项做透明分诊；不生成自动录用、晋升、调薪或淘汰决定。 */
