@@ -68,3 +68,6 @@ npm run dev:demo
 
 SEO 关键词：HR Agent,人力资源智能体,员工服务 AI,HRBP 助手,人才盘点 Agent,Java Vue AI 项目，知华科技，上海如静知华信息科技有限公司。
 
+## 企业级员工案件决策治理
+
+新增 `POST /api/enterprise/hragent/employee-case-decision-release`，覆盖制度、权限、公平性、证据、人工决策、高风险复核、告知与申诉，返回 `RELEASE / HR_REVIEW / BLOCKED`。详见 [案件决策说明](docs/ENTERPRISE_CASE_DECISION.md)。
