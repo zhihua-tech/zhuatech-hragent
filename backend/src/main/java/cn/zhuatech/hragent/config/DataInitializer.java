@@ -1,7 +1,13 @@
 /* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.hragent.config;
 import cn.zhuatech.hragent.model.*; import cn.zhuatech.hragent.repository.*; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.*; import org.springframework.security.crypto.password.PasswordEncoder; import java.time.LocalDate; import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Configuration public class DataInitializer {
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  @Bean CommandLineRunner seed(OperatingUnitRepository units,WorkRecordRepository records,ResourceRegisterRepository resources,ReviewRecordRepository reviews,UserRepository users,PasswordEncoder encoder){return args->{if(units.count()>0)return;
   OperatingUnit first=units.save(new OperatingUnit("HR-EAST","华东 HRBP 组","人力资源中心",1800)),second=units.save(new OperatingUnit("HR-TALENT","总部人才组","组织发展中心",1200)),third=units.save(new OperatingUnit("HR-ER","员工关系组","人力资源中心",800));
   WorkRecord a=records.save(new WorkRecord("HRC-260808-031","EMP-E1026","新任主管试用期辅导建议",first,8,5,2,LocalDate.now().plusDays(2),WorkRecord.Status.RELEASED,"POLICY-V6")); WorkRecord b=records.save(new WorkRecord("HRC-260808-024","EMP-R0815","研发岗位内部流动咨询",second,6,6,0,LocalDate.now().plusDays(0),WorkRecord.Status.COMPLETED,"POLICY-V5")); WorkRecord c=records.save(new WorkRecord("HRC-260808-038","EMP-S0421","灵活办公制度适用确认",third,7,3,1,LocalDate.now().plusDays(3),WorkRecord.Status.RUNNING,"POLICY-V4"));
