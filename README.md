@@ -1,5 +1,7 @@
 # HrAgent · 知华科技人力资源智能体
 
+[简体中文](README.md) | [English](README.en.md)
+
 > 把制度依据、员工体验和人工判断放在同一条服务链路里。
 >
 > [知华科技（上海如静知华信息科技有限公司）官网](https://www.zhuatech.cn/) · 企业 AI 转型、Agent 定制、私有化部署与软件项目外包
