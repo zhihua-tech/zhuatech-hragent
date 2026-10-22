@@ -1,5 +1,9 @@
 [简体中文](README.md) | **English**
 
+## Functional update: Employee case text redaction
+
+Redacts common mainland China mobile numbers, 18-character identity-number patterns and bounded email addresses locally. Rule matches are not a comprehensive privacy assessment. Available to signed-in users with editable inputs, explicit validation and JSON export. See [API, examples and limitations](docs/AI_BUSINESS_UPGRADE_20261023.md). No external model calls or automatic business changes. Existing license and contact details are retained.
+
 # ZhuaTech HrAgent
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for human resources and workforce operations.
