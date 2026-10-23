@@ -1,0 +1,66 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "HOLD",
+      "cashHours": "#6",
+      "estimatedCompensation": "#450"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "submittedHours": "8"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "submittedHours": "8",
+      "budget": "449.99"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "timeOffHours": "9"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "approvedHours": "11"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "hourlyRate": "0",
+      "submittedHours": "8"
+    },
+    "expected": {
+      "estimatedCompensation": "#0",
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "timeOffHours": "8",
+      "submittedHours": "8"
+    },
+    "expected": {
+      "cashHours": "#0",
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]

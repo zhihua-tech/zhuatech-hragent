@@ -1,0 +1,93 @@
+{
+  "slug": "hragent",
+  "title": "加班核准工时与补偿预算",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "submittedHours",
+      "label": "提交加班小时",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "approvedHours",
+      "label": "核准加班小时",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "timeOffHours",
+      "label": "核准内补休小时",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "hourlyRate",
+      "label": "小时工资基数",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "multiplier",
+      "label": "现金补偿倍率",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "1",
+      "max": "10"
+    },
+    {
+      "key": "budget",
+      "label": "补偿预算元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "cashHours",
+      "label": "现金补偿小时"
+    },
+    {
+      "key": "estimatedCompensation",
+      "label": "预计补偿元"
+    },
+    {
+      "key": "unapprovedHours",
+      "label": "未核准小时"
+    }
+  ],
+  "description": "对提交/批准工时、补休工时和现金补偿比例核算预计补偿，超批准工时明确阻断。倍率由企业合法政策输入，不内置劳动法结论。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "submittedHours": "10",
+        "approvedHours": "8",
+        "timeOffHours": "2",
+        "hourlyRate": "50",
+        "multiplier": "1.5",
+        "budget": "500"
+      }
+    ]
+  }
+}
